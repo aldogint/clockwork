@@ -121,7 +121,7 @@ class ClockworkServiceProvider extends ServiceProvider
 		$this->app->alias('clockwork', Clockwork::class);
 
 		$this->registerCommands();
-		$this->regiesterMiddleware();
+		$this->registerMiddleware();
 
 		if ($this->app['clockwork.support']->getConfig('register_helpers', true)) {
 			require __DIR__ . '/helpers.php';
